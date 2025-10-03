@@ -1,0 +1,170 @@
+/* ====== ESTILO GERAL ====== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("fundo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  background: #1d6fa5;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== MENU ====== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background: #eaf4fa;
+  border-bottom: 1px solid #d0e3ef;
+}
+
+nav button {
+  background: #1d6fa5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #15527a;
+}
+
+/* ====== SEÇÕES ====== */
+section {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #1d6fa5;
+  border-left: 5px solid #1d6fa5;
+  padding-left: 10px;
+}
+
+/* ====== FORMULÁRIOS ====== */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #1d6fa5;
+  outline: none;
+}
+
+form button {
+  grid-column: span 2;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #1f8736;
+}
+
+/* ====== LISTAS ====== */
+#listaClientes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#listaClientes li {
+  background: #f9fcfe;
+  border: 1px solid #dce7ef;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listaClientes li span {
+  font-weight: bold;
+  color: #1d6fa5;
+}
+
+/* ====== AGENDAMENTOS ====== */
+#conteudoAgendamentos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#conteudoAgendamentos th,
+#conteudoAgendamentos td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#conteudoAgendamentos th {
+  background: #1d6fa5;
+  color: white;
+}
+
+/* Estilo do botão de atualizar lista */
+.botao-atualizar {
+  background-color: #28a745; /* Cor verde */
+  color: white; /* Texto branco */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Retirar borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostrar o cursor como uma mãozinha */
+  transition: background-color 0.3s ease; /* Efeito suave de transição */
+  margin-top: 20px; /* Espaçamento para não ficar grudado na tabela */
+}
+
+.botao-atualizar:hover {
+  background-color: #218838; /* Tom de verde mais escuro quando passar o mouse */
+}
