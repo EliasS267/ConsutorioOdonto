@@ -15,7 +15,7 @@ app.use(express.json());
 // 🔒 String de conexão com o banco (Neon)
 const pool = new Pool({
   connectionString:
-    "postgresql://neondb_owner:SENHA_AQUI@ep-purple-tooth-ad5odjhw-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require",
+    "postgresql://neondb_owner:npg_9GNeBgjhP8MK@ep-fancy-hill-aduwokua-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
 });
 
 // ✅ Rota de teste (principal)
