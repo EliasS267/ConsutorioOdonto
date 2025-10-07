@@ -1,10 +1,11 @@
-import pkg from "pg";
-const { Pool } = pkg;
+import pg from "pg";
+const { Pool } = pg;
 
-// 🔧 Dados de conexão — você pode mudar depois se quiser
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL, // variável do Railway
-  ssl: { rejectUnauthorized: false },
+  connectionString:
+    process.env.DATABASE_URL ||
+    "postgresql://usuario:senha@localhost:5432/seubanco",
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
 });
 
 export default pool;

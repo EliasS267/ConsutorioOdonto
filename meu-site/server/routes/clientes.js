@@ -28,6 +28,19 @@ router.post("/", async (req, res) => {
     res.status(500).json({ error: "Erro ao adicionar cliente" });
   }
 });
+router.post("/", async (req, res) => {
+  const { nome, telefone, idade } = req.body;
+  try {
+    const result = await pool.query(
+      "INSERT INTO clientes (nome, telefone, idade) VALUES ($1, $2, $3) RETURNING *",
+      [nome, telefone, idade]
+    );
+    res.status(201).json(result.rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Erro ao adicionar cliente" });
+  }
+});
 
 // ✏️ Atualizar cliente
 router.put("/:id", async (req, res) => {
